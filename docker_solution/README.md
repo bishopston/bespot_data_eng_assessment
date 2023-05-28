@@ -19,7 +19,7 @@ We can have access to spark's master bash.
 docker exec -it <spark_master_container_name> /bin/bash
 ```
 
-We can enter into postgres shell
+We can enter into postgres shell and create the necessary tables at the *bespot* database.
 
 ```
 docker exec -it <postgres_container_name> /bin/bash
