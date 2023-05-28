@@ -57,6 +57,6 @@ psql -p 5432 -d airflow -U airflow -h localhost
 
 and create *bespot* database and necessary tables.
 
-We create a simple DAG which runs daily and consists of two tasks which utilize Python Operators. The ingestion task runs first and the process task runs consequently. The logic is the same with previous solutions. The datasets are stored in database after being processed.
+We create a simple DAG (**dag_ingest_process.py**) which runs daily and consists of two tasks which utilize Python Operators. The ingestion task runs first and the process task runs consequently. The logic is the same with previous solutions. The datasets are stored in database after being processed.
 
 By connecting to *localhost:8080*, we verify successful execution in task logs and observe that our data have been inserted in corresponding tables.
