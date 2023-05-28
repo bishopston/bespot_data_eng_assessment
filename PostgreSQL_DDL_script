@@ -1,0 +1,12 @@
+CREATE DATABASE bespot;
+
+CREATE TABLE user_pages_process (user_id VARCHAR ( 50 ) NOT NULL, session_id VARCHAR ( 50 ) NOT NULL, timestamp INT NOT NULL, page VARCHAR ( 50 ) NOT NULL, created_on TIMESTAMP NOT NULL);
+CREATE TABLE user_trans_process (user_id VARCHAR ( 50 ) NOT NULL, session_id VARCHAR ( 50 ) NOT NULL, timestamp INT NOT NULL, transaction VARCHAR ( 1 ) NOT NULL, created_on TIMESTAMP NOT NULL);
+CREATE TABLE page_hits (page VARCHAR ( 50 ) NOT NULL, pace_count INT NOT NULL, rank INT NOT NULL, created_on TIMESTAMP NOT NULL);
+CREATE TABLE page_users (page VARCHAR ( 50 ) NOT NULL, user_per_page_count INT NOT NULL, created_on TIMESTAMP NOT NULL);
+CREATE TABLE page_trans (page VARCHAR ( 50 ) NOT NULL, trans_per_page INT NOT NULL, created_on TIMESTAMP NOT NULL);
+CREATE TABLE user_purchasing_time (user_id VARCHAR ( 50 ) NOT NULL, purchace_time_per_user NUMERIC(10,2) NOT NULL, created_on TIMESTAMP NOT NULL);
+
+CREATE USER myprojectuser WITH PASSWORD 'password';
+
+GRANT ALL PRIVILEGES ON DATABASE bespot TO myprojectuser;
