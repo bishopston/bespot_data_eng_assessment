@@ -16,7 +16,7 @@ spark = (
     SparkSession.builder.appName("bespot")
     .config(
         "spark.executor.extraClassPath",
-        "/usr/local/airflow/data/postgresql-42.6.0.jar",
+        "/usr/local/airflow/jars/postgresql-42.6.0.jar",
     )
     .config("spark.jars", "/usr/local/airflow/jars/postgresql-42.6.0.jar")
     .getOrCreate()
