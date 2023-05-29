@@ -20,3 +20,9 @@ For the transformation process **(process_pages_trans.ipynb)** we read the inges
   We assume that time to purchase for a user within a specific session is considered the time between the earliest timestamp within this session and the transaction timestamp of the same session, independent of the kind of transaction (i.e. whether it is “A” or “B”). 
 
 For the 3rd and 4th questions we need first to join the two datasets on two fields (user and session_id). After creating the target datasets for each question, we write them in the corresponding database tables with "overwrite" mode as we need to have the new view on the four questions.
+
+By entering Postgres cli from a bash terminal we can verify data insertion in each table.
+
+```
+sudo -u postgres psql
+```
