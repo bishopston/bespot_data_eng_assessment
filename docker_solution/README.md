@@ -31,6 +31,6 @@ The ingestion and transformation process are handled by two python files (**besp
 We can run the scripts through spark master shell.
 
 ```
-python bespot_ingest.py
-python bespot_process.py
+python /mounted-data/bespot_ingest.py
+python /mounted-data/bespot_process.py
 ```
